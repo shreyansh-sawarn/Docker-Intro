@@ -74,18 +74,18 @@ Here is a minimal example:
 
     CMD ["bash"]
 
-From command line
+From command line:
 
     cd <directory/with/the/dockerfile>
 
     # Build the docker image from the Dockerfile
-    docker build -t example .
+    docker build . -t example
 
     # See that the image called example:latest has been created
     docker image list
 
     # Run the created image
-    docker run -it -p xx:xx example
+    docker run -it example
     
     # Note that we do not need to call bash to run bash as it was set to run with CMD in the Dockerfile
     # Also, latest is the default tag if you don't specify whenever you pull a docker image from docker hub
