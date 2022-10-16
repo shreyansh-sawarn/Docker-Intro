@@ -101,3 +101,6 @@ Using Compose is basically a three-step process:
     Define the services that make up your app in docker-compose.yml so that they can be run together in an isolated environment.
     
     Run docker-compose up and Compose starts and runs your entire app.
+
+To run the Flask Docker app using Dockerfile, follow the instruction [here](https://github.com/shreyansh-sawarn/Docker-Intro/blob/main/flask-app/README.md).
+To run the Apache-PHP Docker app using docker-compose, follow the instruction [here](https://github.com/shreyansh-sawarn/Docker-Intro/blob/main/apache-php-app/README.md).
