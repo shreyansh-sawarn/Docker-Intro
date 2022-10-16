@@ -31,7 +31,7 @@ To not run `sudo` everytime you run a Docker command, give it group access (for 
     sudo gpasswd -a $USER docker
     newgrp docker # or logout to apply changes
 
-# Docker basics
+# Docker Basics
 
 You can run Ubuntu 20.04 with the following Docker command:
 
