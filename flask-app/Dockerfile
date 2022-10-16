@@ -1,7 +1,5 @@
 FROM ubuntu:latest
 
-MAINTAINER Aditya Mandil
-
 RUN apt-get update -y && apt-get install -y python3-pip 
 
 WORKDIR /app
