@@ -25,7 +25,7 @@ Instructions to install Docker:
 
 [Install from here](https://docs.docker.com/install/)
 
-To make it so that you don't have to run `sudo` everytime you run a Docker command, give it group access:
+To not run `sudo` everytime you run a Docker command, give it group access (for linux based systems):
 
     sudo groupadd docker
     sudo gpasswd -a $USER docker
@@ -45,13 +45,13 @@ The `-it` gives an interactive terminal (kind of like SSH'ing into the container
 
 A Dockerfile (named, `Dockerfile`, with no extension, by default) is something that specifies how to build a Docker image.  Each line in a Dockerfile has a command/instruction like `FROM`, `RUN`, `CMD`, `COPY`, etc. and creates new context. The Docker daemon runs the commands/instructions in the Dockerfile one-by-one, committing the result of each instruction to a new image if necessary, before finally outputting the ID of your new image. The Docker daemon will automatically clean up the context you sent. A context can be thought of as an intermediate Docker image (like a class, not an instance), and you build your Docker image, which makes Docker containers (the instance), by adding one or more contexts on existing Docker images (like Ubuntu).
 
-P.S. - Docker uses a caching system when building containers, making it so that each line in a Dockerfile is saved.  This means that running a Dockerfile the second time is almost instant.  It also means that when writing your Dockerfile, try not to change lines that are at the top of the file because it will have to rebuild everything below it.
+P.S. - Docker uses a caching system when building containers, making it so that each line in a Dockerfile is saved. This means that running a Dockerfile the second time is almost instant. It also means that when writing you're Dockerfile, try not to change lines that are at the top of the file because it will have to rebuild everything below it.
 
 A few important points:
 
 - Don't use `sudo` because running a Dockerfile creates an image with super user permissions by default. If you want to run commands as a user in the Dockerfile and to use `sudo`, you will have to install it with `apt install` first and configure it accordingly.
 - A Dockerfile must not require user input in any commands/instructions during build because if they do, the Dockerfile will fail to build. Instead, automatically accept(input -yes/y in command), for example `apt install -y curl`.
-- It is good practice to make several installs at once (and even several statements) to save build time, you can use `\` to continue on a new line and `&&` to run another command after the last one succeeds. For example:
+- It is good practice to make several installs at once (and even several statements) to save build time. You can use `\` to continue on a new line and `&&` to run another command after the last one succeeds. For example:
 
         RUN apt update && apt upgrade -y \
         	&& apt install -y \
@@ -85,7 +85,7 @@ From command line
     docker image list
 
     # Run the created image
-    docker run -it -p xx:xxexample
+    docker run -it -p xx:xx example
     
     # Note that we do not need to call bash to run bash as it was set to run with CMD in the Dockerfile
     # Also, latest is the default tag if you don't specify whenever you pull a docker image from docker hub
@@ -97,5 +97,7 @@ Compose is a tool for defining and running multi-container Docker applications. 
 Using Compose is basically a three-step process:
 
     Define your app’s environment with a Dockerfile so it can be reproduced anywhere.
+    
     Define the services that make up your app in docker-compose.yml so that they can be run together in an isolated environment.
+    
     Run docker-compose up and Compose starts and runs your entire app.
