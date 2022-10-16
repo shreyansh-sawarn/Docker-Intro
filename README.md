@@ -23,7 +23,7 @@ Containers sit on top of a physical server and its host OS — typically Linux o
 
 Instructions to install Docker:
 
-[Install from here](https://docs.docker.com/install/)
+[Install Docker Desktop](https://docs.docker.com/install/)
 
 To not run `sudo` everytime you run a Docker command, give it group access (for linux based systems):
 
