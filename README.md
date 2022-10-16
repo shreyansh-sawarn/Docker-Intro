@@ -31,7 +31,7 @@ To not run `sudo` everytime you run a Docker command, give it group access (for 
     sudo gpasswd -a $USER docker
     newgrp docker # or logout to apply changes
 
-# Docker basics
+# Docker Basics
 
 You can run Ubuntu 20.04 with the following Docker command:
 
@@ -74,18 +74,18 @@ Here is a minimal example:
 
     CMD ["bash"]
 
-From command line
+From command line:
 
     cd <directory/with/the/dockerfile>
 
     # Build the docker image from the Dockerfile
-    docker build -t example .
+    docker build . -t example
 
     # See that the image called example:latest has been created
     docker image list
 
     # Run the created image
-    docker run -it -p xx:xx example
+    docker run -it example
     
     # Note that we do not need to call bash to run bash as it was set to run with CMD in the Dockerfile
     # Also, latest is the default tag if you don't specify whenever you pull a docker image from docker hub
@@ -101,3 +101,9 @@ Using Compose is basically a three-step process:
     Define the services that make up your app in docker-compose.yml so that they can be run together in an isolated environment.
     
     Run docker-compose up and Compose starts and runs your entire app.
+
+# Sample Docker Applications
+
+To run the Flask Docker app using Dockerfile, follow the instructions [here](https://github.com/shreyansh-sawarn/Docker-Intro/blob/main/flask-app/README.md).
+
+To run the Apache-PHP Docker app using docker-compose, follow the instructions [here](https://github.com/shreyansh-sawarn/Docker-Intro/blob/main/apache-php-app/README.md).
