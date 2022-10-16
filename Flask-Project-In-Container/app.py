@@ -3,7 +3,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return 'Hey, we have Flask in a Docker container!'
+    return 'Hello World! We have Flask in a Docker container!'
 
 @app.route('/about')
 def about():
