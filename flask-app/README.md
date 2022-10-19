@@ -2,7 +2,7 @@
 
 ```
 $ docker build . -t flask-app
-$ docker run -dit -p 80:5000 flask_app
+$ docker run -dit -p 80:5000 flask-app
 ```
 
 ## Expected result
