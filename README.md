@@ -49,7 +49,7 @@ P.S. - Docker uses a caching system when building containers, making it so that 
 
 A few important points:
 
-- Don't use `sudo` because running a Dockerfile creates an image with super user permissions by default. If you want to run commands as a user in the Dockerfile and to use `sudo`, you will have to install it with `apt install` first and configure it accordingly.
+- Don't use `sudo` because running a Dockerfile creates an image with super user permissions by default. If you want to run commands as a user in the Dockerfile and to use `sudo`, you will have to install it with `apt install sudo` first and configure it accordingly.
 - A Dockerfile must not require user input in any commands/instructions during build because if they do, the Dockerfile will fail to build. Instead, automatically accept(input -yes/y in command), for example `apt install -y curl`.
 - It is good practice to make several installs at once (and even several statements) to save build time. You can use `\` to continue on a new line and `&&` to run another command after the last one succeeds. For example:
 
