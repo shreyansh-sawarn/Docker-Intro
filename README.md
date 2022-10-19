@@ -45,7 +45,7 @@ The `-it` gives an interactive terminal (kind of like SSH'ing into the container
 
 A Dockerfile (named, `Dockerfile`, with no extension, by default) is something that specifies how to build a Docker image.  Each line in a Dockerfile has a command/instruction like `FROM`, `RUN`, `CMD`, `COPY`, etc. and creates new context. The Docker daemon runs the commands/instructions in the Dockerfile one-by-one, committing the result of each instruction to a new image if necessary, before finally outputting the ID of your new image. The Docker daemon will automatically clean up the context you sent. A context can be thought of as an intermediate Docker image (like a class, not an instance), and you build your Docker image, which makes Docker containers (the instance), by adding one or more contexts on existing Docker images (like Ubuntu).
 
-P.S. - Docker uses a caching system when building containers, making it so that each line in a Dockerfile is saved. This means that running a Dockerfile the second time is almost instant. It also means that when writing you're Dockerfile, try not to change lines that are at the top of the file because it will have to rebuild everything below it.
+P.S. - Docker uses a caching system when building containers and hence, each line in a Dockerfile is saved and cached. This means that running a Dockerfile the second time is almost instant. It also means that when writing you're Dockerfile, try not to change lines that are at the top of the file because it will have to rebuild everything below it.
 
 A few important points:
 
