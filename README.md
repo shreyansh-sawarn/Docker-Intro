@@ -107,3 +107,6 @@ Using Compose is basically a three-step process:
 To run the Flask Docker app using Dockerfile, follow the instructions [here](https://github.com/shreyansh-sawarn/Docker-Intro/blob/main/flask-app/README.md).
 
 To run the Apache-PHP Docker app using docker-compose, follow the instructions [here](https://github.com/shreyansh-sawarn/Docker-Intro/blob/main/apache-php-app/README.md).
+
+
+Made with ❤️ by Shreyansh. Drop a ⭐ if you like it.
