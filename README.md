@@ -19,6 +19,10 @@ Containers offer a logical packaging mechanism in which applications can be abst
 From an operations standpoint, apart from portability containers also give more granular control over resources giving your infrastructure improved efficiency which can result in better utilization of your compute resources.
 Containers sit on top of a physical server and its host OS — typically Linux or Windows. Each container shares the host OS kernel and, usually, the binaries and libraries, too. Shared components are read-only. Sharing OS resources such as libraries significantly reduces the need to reproduce the operating system code, and means that a server can run multiple workloads with a single operating system installation. Containers are thus exceptionally light — they are only megabytes in size and take just seconds to start. Compared to containers, VMs take minutes to run and are an order of magnitude larger than an equivalent container.
 
+# Docker Architecture
+
+![](http://apachebooster.com/kb/wp-content/uploads/2017/09/docker-architecture.png)
+
 # Setup
 
 Instructions to install Docker:
